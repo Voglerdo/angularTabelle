@@ -1,1 +1,3 @@
 # angularTabelle
+
+execute "yarn install"
