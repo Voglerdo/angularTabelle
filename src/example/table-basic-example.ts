@@ -1,17 +1,24 @@
 import {Component} from '@angular/core';
 import {MatTableModule} from '@angular/material/table';
+import internal from 'stream';
 
-export interface PeriodicElement {
+export interface DashboardData {
 
   name: string;
-  ID: number;
-  age: number;
-  gender: string;
-  country: string;
+  vorname: string;
+  groeße:number;
+  product: string;
+  preis:number;
+  fleischart:string;
+  sonderwunsch:string;
+  spezialAnweisung:string;
+  soße1: string;
+  soße2: string;
+  datum: Date;
 }
 
-const ELEMENT_DATA: PeriodicElement[] = [
-  {ID: 1, name: 'RR', age: 69, gender: 'Sigma',country: 'Österreich' },
+const ELEMENT_DATA: DashboardData[] = [
+  {name: 'Rauch', vorname: 'raphae' },
 
 ];
 
