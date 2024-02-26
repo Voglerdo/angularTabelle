@@ -1,34 +1,60 @@
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
-  <ng-container matColumnDef="ID">
-    <th mat-header-cell *matHeaderCellDef> ID </th>
-    <td mat-cell *matCellDef="let element"> {{element.ID}} </td>
-  </ng-container>
-
-
   <ng-container matColumnDef="name">
     <th mat-header-cell *matHeaderCellDef> Name </th>
     <td mat-cell *matCellDef="let element"> {{element.name}} </td>
   </ng-container>
 
-
-  <ng-container matColumnDef="age">
-    <th mat-header-cell *matHeaderCellDef> age </th>
-    <td mat-cell *matCellDef="let element"> {{element.age}} </td>
+  <ng-container matColumnDef="vorname">
+    <th mat-header-cell *matHeaderCellDef> Vorname </th>
+    <td mat-cell *matCellDef="let element"> {{element.vorname}} </td>
   </ng-container>
 
-  <ng-container matColumnDef="gender">
-    <th mat-header-cell *matHeaderCellDef> gender </th>
-    <td mat-cell *matCellDef="let element"> {{element.gender}} </td>
+  <ng-container matColumnDef="groesse">
+    <th mat-header-cell *matHeaderCellDef> Größe </th>
+    <td mat-cell *matCellDef="let element"> {{element.groesse}} </td>
   </ng-container>
 
-  
-  <ng-container matColumnDef="country">
-    <th mat-header-cell *matHeaderCellDef> country </th>
-    <td mat-cell *matCellDef="let element"> {{element.country}} </td>
+  <ng-container matColumnDef="product">
+    <th mat-header-cell *matHeaderCellDef> Product </th>
+    <td mat-cell *matCellDef="let element"> {{element.product}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="preis">
+    <th mat-header-cell *matHeaderCellDef> Preis </th>
+    <td mat-cell *matCellDef="let element"> {{element.preis}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="fleischart">
+    <th mat-header-cell *matHeaderCellDef> Fleischart </th>
+    <td mat-cell *matCellDef="let element"> {{element.fleischart}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="sonderwunsch">
+    <th mat-header-cell *matHeaderCellDef> Sonderwunsch </th>
+    <td mat-cell *matCellDef="let element"> {{element.sonderwunsch}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="spezialAnweisung">
+    <th mat-header-cell *matHeaderCellDef> Spezialanweisung </th>
+    <td mat-cell *matCellDef="let element"> {{element.spezialAnweisung}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="sosse1">
+    <th mat-header-cell *matHeaderCellDef> Soße 1 </th>
+    <td mat-cell *matCellDef="let element"> {{element.sosse1}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="sosse2">
+    <th mat-header-cell *matHeaderCellDef> Soße 2 </th>
+    <td mat-cell *matCellDef="let element"> {{element.sosse2}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="datum">
+    <th mat-header-cell *matHeaderCellDef> Datum </th>
+    <td mat-cell *matCellDef="let element"> {{element.datum }} </td>
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
-

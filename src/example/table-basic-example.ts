@@ -1,24 +1,36 @@
 import {Component} from '@angular/core';
 import {MatTableModule} from '@angular/material/table';
-import internal from 'stream';
+
 
 export interface DashboardData {
 
   name: string;
   vorname: string;
-  groeße:number;
+  groesse:number;
   product: string;
   preis:number;
   fleischart:string;
   sonderwunsch:string;
   spezialAnweisung:string;
-  soße1: string;
-  soße2: string;
+  sosse1: string;
+  sosse2: string;
   datum: Date;
 }
 
-const ELEMENT_DATA: DashboardData[] = [
-  {name: 'Rauch', vorname: 'raphae' },
+const Dashboard_DATA: DashboardData[] = [
+  {
+    name: "Mustermann",
+    vorname: "Max",
+    groesse: 180,
+    product: "Pizza",
+    preis: 12.99,
+    fleischart: "Huhn",
+    sonderwunsch: "Ohne Zwiebeln",
+    spezialAnweisung: "Knusprig gebacken",
+    sosse1: "Tomatensoße",
+    sosse2: "Knoblauchsoße",
+    datum: new Date("2024-02-26"),
+  },
 
 ];
 
@@ -33,6 +45,6 @@ const ELEMENT_DATA: DashboardData[] = [
   imports: [MatTableModule],
 })
 export class TableBasicExample {
-  displayedColumns: string[] = ['ID', 'name', 'country','gender','age'];
-  dataSource = ELEMENT_DATA;
+  displayedColumns: string[] = ['name', 'vorname' ];
+  dataSource = Dashboard_DATA;
 }
