@@ -22,14 +22,14 @@ const Dashboard_DATA: DashboardData[] = [
     name: "Mustermann",
     vorname: "Max",
     groesse: 180,
-    product: "Pizza",
+    product: "Doener",
     preis: 12.99,
     fleischart: "Huhn",
     sonderwunsch: "Ohne Zwiebeln",
     spezialAnweisung: "Knusprig gebacken",
     sosse1: "Tomatensoße",
     sosse2: "Knoblauchsoße",
-    datum: new Date("2024-02-26"),
+    datum: new Date(Date.now()),
   },
 
 ];
@@ -45,6 +45,9 @@ const Dashboard_DATA: DashboardData[] = [
   imports: [MatTableModule],
 })
 export class TableBasicExample {
-  displayedColumns: string[] = ['name', 'vorname' ];
+  displayedColumns: string[] = ['name', 'vorname', 'groesse', 'product', 'preis', 'fleischart', 'sonderwunsch', 'spezialAnweisung', 'sosse1', 'sosse2', 'datum'];
   dataSource = Dashboard_DATA;
+  formatDate(date: Date): string {
+    return new Intl.DateTimeFormat('de-DE', { year: 'numeric', month: '2-digit', day: '2-digit' }).format(date);
+  }
 }
