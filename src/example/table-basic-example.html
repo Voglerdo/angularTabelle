@@ -1,3 +1,7 @@
+<div class="dashboard-header">
+  <h2>Dashboard</h2>
+</div>
+
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
   <ng-container matColumnDef="name">
@@ -58,3 +62,10 @@
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
+
+<div class="button-container">
+  <button mat-raised-button (click)="editRow()">Edit</button>
+  <button mat-raised-button (click)="refreshData()">Refresh</button>
+  <button mat-raised-button (click)="openFilterDialog()">Filter</button>
+  <button mat-raised-button (click)="deleteRow()">Delete</button>
+</div>

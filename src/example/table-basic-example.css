@@ -1,3 +1,20 @@
 table {
   width: 100%;
+  margin-bottom: 10px;
+}
+.dashboard-header {
+  text-align: center;
+  padding: 10px;
+  background-color: #f5f5f5;
+}
+
+.button-container {
+ margin-left: 5px;
+  position: fixed; /* Make the container position relative to the viewport */
+  left: 20px;      /* Space from the left of the screen */ 
+  display: flex;   /* Maintain horizontal layout of buttons */
+}
+
+.button-container button {
+  margin: 0 5px; /* Add spacing between buttons */  
 }
